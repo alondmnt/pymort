@@ -1,4 +1,4 @@
-#pymort
+# pymort
 
 Python simulation for mortgage plans.
 
