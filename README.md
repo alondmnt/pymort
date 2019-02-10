@@ -28,8 +28,8 @@ inflat_1_50    2  <<< #2 is the cheapest offer for 1.5% inflation
 inflat_2_00    2
 ```
 
-* An interpolation model can help you decide on the period of the loan that you wish the bank to base its offer on. Based on a few initial offers, it can simulate predicted offers under different lenghts of terms inflation scenarios and constraints.
-    * For example, the combination of 18, 29, and 15 years in the table below results in favorable return ratios when the average yearly inflation rate increases above 1.5% (a result of which is that the monthly payments of the first offer exceed some limit and become too large to bear).
+* An interpolation model can help you decide on the period of the loan that you wish the bank to base its offer on. Based on a few initial offers, it can simulate predicted offers under different lenghts of terms, inflation scenarios and constraints.
+    * For example, the combination of 18, 29, and 15 years in the table below results in favorable return ratios (the predicted cost of every loaned dollar) when the average yearly inflation rate increases above 1.5% (a result of which is that the monthly payments of the first offer exceed some limit and become too large to bear).
 
 ```
 inflat_0_00    (16, 30, 16)
