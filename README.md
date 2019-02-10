@@ -4,7 +4,7 @@ Python simulation for mortgage plans.
 
 DISCLAIMER: Pymort implements a number of calculators that may help in planning a loan, however it does not provide financial consulting of any kind, and does not replace the guidance of a professional advisor.
 
-See the tutorial notebook [here](#pymort_tutorial.ipynb).
+See the tutorial notebook [here](pymort_tutorial.ipynb).
 
 ### Features
 
