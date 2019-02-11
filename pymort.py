@@ -289,11 +289,16 @@ class LinearSim(MortgageSim):
         # tidy up
         return_ratio = pd.DataFrame.from_dict({tuple(years[list(i)]): return_ratio[i]
                         for i in ibest if np.isfinite(i).all()}).T
+        highest_pay = pd.DataFrame.from_dict({tuple(years[list(i)]): highest_pay[i]
+                        for i in ibest if np.isfinite(i).all()}).T
+
+        if not len(return_ratio):
+            print('no matching plans found')
+            return return_ratio, highest_pay
+
         return_ratio.index = return_ratio.index.set_names(['plan_%d' % (p+1) for p in range(P)])
         return_ratio.columns = [('inflat_%.2f' % i).replace('.', '_') for i in inflation]
 
-        highest_pay = pd.DataFrame.from_dict({tuple(years[list(i)]): highest_pay[i]
-                        for i in ibest if np.isfinite(i).all()}).T
         highest_pay.index =  highest_pay.index.set_names(['plan_%d' % (p+1) for p in range(P)])
         highest_pay.columns = [('inflat_%.2f' % i).replace('.', '_') for i in inflation]
 
